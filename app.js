@@ -20,7 +20,8 @@ app.use(helmet());
 var mongoose = require('mongoose');
 //var mongoDB = 'mongodb://p_c_admin:IAmThePCAdmin@ds153015.mlab.com:53015/product_catalog';
 
-var mongoDB = process.env.MONGODB_URI || 'mongodb://p_c_admin:IAmThePCAdmin@ds153015.mlab.com:53015/product_catalog';
+//var mongoDB = process.env.MONGODB_URI || 'mongodb://p_c_admin:IAmThePCAdmin@ds153015.mlab.com:53015/product_catalog'; // old connection string
+var mongoDB = process.env.MONGODB_URI || 'mongodb://ProductCatalogAdmin:IAmTheProductCatalogAdmin@ds129146.mlab.com:29146/gcp_local_library_production'
 
 mongoose.connect(mongoDB, {
   useMongoClient: true
